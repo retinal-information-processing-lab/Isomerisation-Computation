@@ -19,6 +19,7 @@ pip install numpy scipy matplotlib plotly tqdm pillow
 - `Color Processing Examples.ipynb` – Jupyter notebook demonstrating how to use the provided utilities.
 
 
+## Usage
 ### 1. Interactive LED Intensity Exploration
 ```python
 from colors_utils import interactive_Ptot_slider
@@ -26,7 +27,6 @@ from colors_utils import interactive_Ptot_slider
 interactive_Ptot_slider()
 ```
 
-## Usage
 ### 2. Load Spectral Data
 ```python
 from colors_utils import prSpectrums, ledSpectrums
