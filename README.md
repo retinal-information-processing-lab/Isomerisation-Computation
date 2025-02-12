@@ -18,8 +18,16 @@ pip install numpy scipy matplotlib plotly tqdm pillow
 - `colors_utils.py` – Contains core utility functions for spectral analysis, isomerization computation, and optimization.
 - `Color Processing Examples.ipynb` – Jupyter notebook demonstrating how to use the provided utilities.
 
+
+### 1. Interactive LED Intensity Exploration
+```python
+from colors_utils import interactive_Ptot_slider
+
+interactive_Ptot_slider()
+```
+
 ## Usage
-### 1. Load Spectral Data
+### 2. Load Spectral Data
 ```python
 from colors_utils import prSpectrums, ledSpectrums
 
@@ -27,7 +35,7 @@ opsin_data = prSpectrums("./PhotoReceptorData.pkl", plot=True)
 led_data = ledSpectrums("./IlluminationData.pkl", plot=True)
 ```
 
-### 2. Compute Isomerization Matrix
+### 3. Compute Isomerization Matrix
 ```python
 from colors_utils import get_isomerisation_matrix
 
@@ -39,20 +47,13 @@ isomerisation_matrix = get_isomerisation_matrix(
 )
 ```
 
-### 3. Optimize LED Power Mix
+### 4. Optimize LED Power Mix
 ```python
 from colors_utils import get_mix_color
 
 target_isomerisation = {"Scones": 1e5, "Mcones": 5e4}
 led_powers = get_mix_color(target_isomerisation, mix_type="balance")
 print(led_powers)
-```
-
-### 4. Interactive LED Intensity Exploration
-```python
-from colors_utils import interactive_Ptot_slider
-
-interactive_Ptot_slider()
 ```
 
 ### 5. Plot Isomerization Results
