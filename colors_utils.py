@@ -86,7 +86,7 @@ def ledSpectrums(path="./IlluminationData.pkl", plot=True, colors = {"Blue": "bl
                 continue    
                 
             if led not in colors.keys():
-                colors[led] = get_led_color(ledSpectrum[led], ledSpectrum[x_axis])
+                colors[led] = get_led_color(ledSpectrum[led], x_axis)
             plt.plot(x_axis, (np.clip(ledSpectrum[led]/max(ledSpectrum[led]), 0, None)), label=led, color=colors[led], alpha = 0.7)
         plt.legend()
         plt.title("LED Spectrums")
