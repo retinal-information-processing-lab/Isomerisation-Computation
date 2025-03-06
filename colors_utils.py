@@ -18,7 +18,7 @@ import openpyxl as pxl
 
 
 
-def prSpectrums(path="./PhotoReceptorData.pkl", plot=True):
+def prSpectrums(path="./PhotoReceptorData.pkl", plot=True, colors={"Scones": "blue", "Mcones": "green", "RedOpsin": "red", "Rods": "black", "Mela":):
     """
     Loads and optionally plots the spectral sensitivity of photoreceptors.
 
@@ -41,7 +41,7 @@ def prSpectrums(path="./PhotoReceptorData.pkl", plot=True):
 
     
     prSpectrums = np.load(path, allow_pickle=True)
-    colors={"Scones": "blue", "Mcones": "green", "RedOpsin": "red", "Rods": "black", "Mela": "purple"}
+ "purple"}
     if plot:
         x_axis = prSpectrums["x_axis"]
         for pr in prSpectrums.keys():
@@ -56,7 +56,7 @@ def prSpectrums(path="./PhotoReceptorData.pkl", plot=True):
 
 
 
-def ledSpectrums(path="./IlluminationData.pkl", plot=True):
+def ledSpectrums(path="./IlluminationData.pkl", plot=True, colors = {"Blue": "blue", "Green": "green", "Red": "red", "White":"grey", "Violet": "purple", "Yellow": "orange"}):
     """
     Loads and optionally plots the spectral distributions of LED sources.
 
@@ -78,7 +78,6 @@ def ledSpectrums(path="./IlluminationData.pkl", plot=True):
     """
 
     ledSpectrum = np.load(path, allow_pickle=True)
-    colors = {"Blue": "blue", "Green": "green", "Red": "red", "White":"grey", "Violet": "purple", "Yellow": "orange"}
 
     if plot:
         x_axis = ledSpectrum["x_axis"]
