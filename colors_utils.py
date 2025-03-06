@@ -18,7 +18,7 @@ import openpyxl as pxl
 
 
 
-def prSpectrums(path="./PhotoReceptorData.pkl", plot=True, colors={"Scones": "blue", "Mcones": "green", "RedOpsin": "red", "Rods": "black", "Mela":"grey"):
+def prSpectrums(path="./PhotoReceptorData.pkl", plot=True, colors={"Scones": "blue", "Mcones": "green", "RedOpsin": "red", "Rods": "black", "Mela":"purple"}):
     """
     Loads and optionally plots the spectral sensitivity of photoreceptors.
 
