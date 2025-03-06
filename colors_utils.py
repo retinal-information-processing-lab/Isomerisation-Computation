@@ -271,7 +271,7 @@ def get_isomerisations(
 def get_led_color(spectrum, x_axis, cmap_name="nipy_spectral"):
     cmap = matplotlib.colormaps[cmap_name]
     norm_x = (x_axis - x_axis.min()) / (x_axis.max() - x_axis.min())
-    return tuple(np.round(np.average(np.array([cmap(n) for n in norm_x]), axis=0, weights=spectrum/spectrum.max())[:-1], decimals=3))
+    return tuple(max(0, min(1, x))  for x in tuple(np.round(np.average(np.array([cmap(n) for n in norm_x]), axis=0, weights=spectrum/spectrum.max())[:-1], decimals=3)))
 
 
 def plot_isomerisations(
